@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("9sy_rMmMFo0xGWDsb"); // Replace with your EmailJS public key
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('service_rtq35wk', 'template_0trjcqt', this) // Replace with your service ID and template ID
+                    .then(() => {
+                        console.log('SUCCESS!');
+                        alert('Message sent successfully!');
+                        this.reset();
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                        alert('Failed to send the message. Please try again.');
+                    });
+            });
+        }
+    </script>
+    <title>Personal Portfolio</title>
+    <!--box-icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="path/to/boxicons.min.css">
+
+
+    <!--custom-css-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <a href="#" class="logo">Portfolio</a>
+        <div>
+            <svg id="menu-icon" class="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </div>
+
+        <div id="cross"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </div>
+
+
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <!-- <a href="#services">Services</a> -->
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <!-- home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's me</h3>
+            <h1>Chauhan Manish</h1>
+            <p class="aboutdesc">"I am a passionate web developer currently pursuing my B.Tech in Computer Science at
+                Parul University. With a keen interest in creating seamless and innovative web solutions, I thrive on
+                turning ideas into functional, user-friendly websites. Eager to learn and adapt to the ever-evolving
+                tech landscape, I am dedicated to honing my skills and staying at the forefront of web development
+                trends. Let's code the future together!"</p>
+            <div class="social-media">
+                <a href="https://github.com/manishchauhan009"><i class='bx bxl-github'></i></a>
+                <a href="https://instagram.com/__manish__chauhan"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://www.linkedin.com/in/manishchauhan0054"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <a href="https://drive.google.com/file/d/1QthU5iK8KGCM44jUIoq7F0fqfJWT53FN/view?usp=drive_link"
+                target="_blank" class="btn">Download Resume</a>
+        </div>
+        <div class="home-img">
+            <img src="./images/profile1.jpg" loading="lazy" alt="img">
+        </div>
+    </section>
+
+    <!-- about section design -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="./images/profile1.jpg" loading="lazy" alt="img" class="aboutimg">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Fronted Developer!</h3>
+            <p id="aboutme">"Hello there! I am a final year student pursuing a degree in Computer Science and
+                Engineering. Throughout my academic journey, I've delved into the dynamic world of web development,
+                where I've not only honed my skills but also cultivated a deep passion for creating meaningful online
+                experiences.My journey has been marked by hands-on experience in developing web applications, where I've
+                successfully translated concepts into real-world projects. From conceptualization to execution, I've
+                enjoyed the entire process of bringing ideas to life through code.
+                Beyond my project work, I have a solid foundation in the basics of computer science, providing me with a
+                comprehensive understanding of the underlying principles that drive technology. I am committed to
+                continuous learning and staying abreast of the latest advancements in the field.
+
+                As a fervent enthusiast of web development, I find joy in crafting elegant and efficient solutions.
+                Whether it's designing responsive user interfaces or optimizing backend functionality, I am dedicated to
+                delivering high-quality results. I am excited about the prospect of contributing my skills to the
+                ever-evolving landscape of technology.
+
+                In my journey as a web developer, I've come to appreciate the power of collaboration, adaptability, and
+                creative problem-solving. Looking forward to the next chapter in my professional career, I am eager to
+                leverage my skills and knowledge to make a positive impact in the world of web development."
+            </p>
+            <a href="#" class="btn">Read more</a>
+        </div>
+    </section>
+
+    <!-- Services section design -->
+    <!-- <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development</h3>
+                <p>"Web development involves building and maintaining websites or web applications through coding,
+                    scripting, and deploying functionalities for enhanced user experiences."
+
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Web_development" class="btn">Read More</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bxs-paint'></i>
+                <h3>Graphic Design</h3>
+                <p>"Graphic design is the art of visually communicating ideas and information through the strategic use
+                    of typography, imagery, and layout."
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Graphic_design" target="_blank" class="btn">Read More</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-bar-chart-alt'></i>
+                <h3>Digital Marketing</h3>
+                <p>"Digital marketing involves leveraging online channels and platforms to promote products, services,
+                    or brands, utilizing strategies like SEO, social media, and content marketing."
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Digital_marketing" target="_blank" class="btn">Read More</a>
+            </div>
+        </div>
+
+    </section> -->
+
+    <!-- Portfolio section design -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+
+        <div class="portfolio-container">
+
+            <div class="portfolio-box">
+                <img src="./images/portfolio1.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>GujaratParibhraman</h4>
+                    <p>Tour Guide Website of Gujarat
+                    </p>
+                    <a href="https://manishchauhan009.github.io/GujaratParibhraman/" target="_blank"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="./images/portfolio2.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>My Gallery</h4>
+                    <p>Image gallery Website</p>
+                    <a href="https://manishchauhan009.github.io/ImageGallery/" target="_blank"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="./images/portfolio3.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Tic Tac Toe</h4>
+                    <p>Fun Game Tic Tac Toe
+                    </p>
+                    <a href="https://manishchauhan009.github.io/TicTacToe/" target="_blank"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+
+            <div class="portfolio-box">
+                <img src="./images/portfolio4.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Portfolio</h4>
+                    <p>Portfolio website to showing my personal information or skills.
+                    </p>
+                    <a href="https://manishchauhan009.github.io/modernportfolio/"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="./images//portfolio5.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Food Delivery Website</h4>
+                    <p>Frontent Project of Food Delivery Websote
+                    </p>
+                    <a href="https://manishchauhan009.github.io/FoodDeliveryWebsite/"><i
+                            class='bx bx-link-external'></i>></a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact<span>Me!</span></h2>
+
+        <form id="contact-form">
+            <div class="input-box">
+                <input type="text" id="full-name" name="user_name" placeholder="Full Name" required>
+                <input type="email" id="email-address" name="user_email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="number" id="mobile-number" name="user_phone" placeholder="Mobile Number" required>
+                <input type="text" id="email-subject" name="user_subject" placeholder="Email Subject" required>
+            </div>
+            <textarea id="your-message" name="message" cols="30" rows="10" placeholder="Your Message"
+                required></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- footer design -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Chauhan Manish | All Right Reserved</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- custom js -->
+    <script src="javascript.js"></script>
+    <script src="path/to/boxicons.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
